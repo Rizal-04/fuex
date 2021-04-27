@@ -48,7 +48,7 @@
       </b-modal>
     </section>
     <div class="justify-center flex p-3">
-      <div class="card w-6/12">
+      <div class="card min-w-min w-6/12">
         <div class="card-content flex ">
           <b-button
             class="m-4 p-1"

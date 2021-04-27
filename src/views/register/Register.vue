@@ -2,7 +2,7 @@
   <div
     style="display:flex;justify-content:center;align-items:center;flex-direction:column;"
   >
-    <div style=" margin:20px 0px 20px 0px;" class="w-1/4">
+    <div style=" margin:20px 0px 20px 0px;">
       <div class="card" style=" margin:20px 0px 20px 0px;">
         <div class="card-content">
           <div class="content">

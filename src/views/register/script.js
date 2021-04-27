@@ -1,4 +1,5 @@
 import Axios from "axios";
+import Config from "../../config";
 
 export default {
   name: "Register",
@@ -18,28 +19,24 @@ export default {
       this.$router.push(tujuan);
     },
     async handleRegister() {
-      this.isLoading = true;
-      var register = await Axios({
-        url: "http://fuex-api.herokuapp.com/users",
-        method: "POST",
-        data: {
-          username: this.dataFromRegister.username,
-          password: this.dataFromRegister.password,
-          mobilePhoneNumber: this.dataFromRegister.numberPhone,
-          userType: "2",
-        },
-      });
       if (
         this.dataFromRegister.username === "" ||
         this.dataFromRegister.password === "" ||
         this.dataFromRegister.numberPhone === ""
       ) {
-        this.$buefy.toast.open({
-          duration: 1500,
-          message: `Input Your Data!!!`,
-          type: "is-danger",
-        });
+        return;
       } else {
+        this.isLoading = true;
+        var register = await Axios({
+          url: `${Config.baseUrl}users`,
+          method: "POST",
+          data: {
+            username: this.dataFromRegister.username,
+            password: this.dataFromRegister.password,
+            mobilePhoneNumber: this.dataFromRegister.numberPhone,
+            userType: "2",
+          },
+        });
         this.$buefy.toast.open({
           duration: 2000,
           message: `Register ` + register.data.message,

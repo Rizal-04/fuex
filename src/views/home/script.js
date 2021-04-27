@@ -1,4 +1,5 @@
 import Axios from "axios";
+import Config from "../../config";
 
 export default {
   name: "Home",
@@ -24,7 +25,7 @@ export default {
     },
     async handleGetWalletByid() {
       var getWallet = await Axios({
-        url: `http://fuex-api.herokuapp.com/wallet/${this.walletId}`,
+        url: `${Config.baseUrl}wallet/${this.walletId}`,
         method: "GET",
       });
       console.log(getWallet);
