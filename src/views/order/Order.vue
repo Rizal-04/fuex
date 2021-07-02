@@ -4,9 +4,9 @@
       <div v-if="isLoading === true">
         <span class="title is-4">Loading...</span>
       </div>
-      <div v-if="isEmpty === true" class=" w-6/12 flex p-5">
-        <div class="card">
-          <div class="card-content">
+      <div v-if="isEmpty === true">
+        <div>
+          <div>
             <p class="title is-4">Belum ada pesanan</p>
           </div>
         </div>

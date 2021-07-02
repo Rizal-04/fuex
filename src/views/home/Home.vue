@@ -1,5 +1,5 @@
 <template>
-  <div class="p-7">
+  <div class="p-7 ">
     <p class="title is-4">Hallo {{ username }}</p>
     <p>
       Saldo anda Rp.
@@ -48,18 +48,15 @@
       </b-modal>
     </section>
     <div class="justify-center flex p-3">
-      <div class="card min-w-min w-6/12">
-        <div class="card-content flex ">
-          <b-button
-            class="m-4 p-1"
-            type="is-danger"
-            @click="modalStatus = true"
-            expanded
-          >
-            Beli Bensin
-          </b-button>
-        </div>
-      </div>
+      <b-button
+        class="m-4 p-1"
+        type="is-danger"
+        @click="modalStatus = true"
+        expanded
+        style="max-width:300px; width:100%;"
+      >
+        Beli Bensin
+      </b-button>
     </div>
   </div>
 </template>
